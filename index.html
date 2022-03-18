@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <title>Vitesse h5 template</title>
+  <meta name="description" content="Opinionated Vite Starter Template">
+</head>
+
+<body class="font-sans dark:text-white dark:bg-hex-121212">
+  <div id="app"></div>
+  <div id="__mainLoading">
+    <style scoped>
+      .main-single-loading {
+        position: fixed;
+        z-index: 1;
+        background: #ecf0f2;
+        animation: opacity 1s infinite;
+      }
+
+      .main-loading {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+      }
+    </style>
+    <div class="main-single-loading main-loading" style="z-index: 0; height: 100%; background-color: #fff"></div>
+    <div>
+      <div class="main-single-loading" style="top: 2.4%; left: 4.3%; width: 42%; height: 2%; border-radius: 12px"></div>
+      <div class="main-single-loading" style="top: 2.4%; left: 54.3%; width: 42%; height: 2%; border-radius: 12px">
+      </div>
+    </div>
+    <div class="main-single-loading" style="top: 7%; left: 3%; width: 94%; height: 24%"></div>
+    <div>
+      <div class="main-single-loading" style="top: 34%; left: 5%; width: 30%; height: 2%"></div>
+      <div class="main-single-loading" style="top: 38%; left: 5%; width: 11.733%; height: 6%"></div>
+      <div class="main-single-loading" style="top: 38%; left: 20%; width: 50%; height: 2%"></div>
+      <div class="main-single-loading" style="top: 42%; left: 20%; width: 30%; height: 2%"></div>
+      <div class="main-single-loading" style="top: 46%; left: 5%; width: 11.733%; height: 2%"></div>
+      <div class="main-single-loading" style="top: 46%; left: 20%; width: 70%; height: 2%"></div>
+    </div>
+    <div>
+      <div class="main-single-loading" style="top: 54%; left: 5%; width: 30%; height: 2%"></div>
+      <div class="main-single-loading" style="top: 58%; left: 5%; width: 11.733%; height: 6%"></div>
+      <div class="main-single-loading" style="top: 58%; left: 20%; width: 50%; height: 2%"></div>
+      <div class="main-single-loading" style="top: 62%; left: 20%; width: 30%; height: 2%"></div>
+      <div class="main-single-loading" style="top: 66%; left: 5%; width: 11.733%; height: 2%"></div>
+      <div class="main-single-loading" style="top: 66%; left: 20%; width: 70%; height: 2%"></div>
+    </div>
+  </div>
+  <script>
+    (function() {
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('color-schema') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+  </script>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
